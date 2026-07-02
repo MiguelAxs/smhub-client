@@ -1,12 +1,8 @@
 import {
   LayoutDashboard,
-  Package,
   ArrowDownToLine,
   ArrowUpFromLine,
   SlidersHorizontal,
-  Boxes,
-  Users,
-  Tags,
   ClipboardList,
   type LucideIcon,
 } from "lucide-react"
@@ -35,24 +31,15 @@ export type NavEntry = NavItem | NavGroup
 
 export const NAV_ITEMS: NavEntry[] = [
   { label: "Dashboard", to: "/dashboard", icon: LayoutDashboard },
-  { label: "Produtos", to: "/produtos", icon: Package },
-  { label: "Categorias", to: "/categorias", icon: Tags },
-  { label: "Estoque", to: "/estoque", icon: Boxes },
   {
     type: "group",
-    label: "Movimentações",
+    label: "Teste",
     icon: ClipboardList,
     items: [
-      { label: "Entradas", to: "/entradas", icon: ArrowDownToLine },
-      { label: "Saídas", to: "/saidas", icon: ArrowUpFromLine },
-      { label: "Ajustes", to: "/ajustes", icon: SlidersHorizontal },
+      { label: "teste1", to: "/teste", icon: ArrowDownToLine },
+      { label: "teste2", to: "/teste", icon: ArrowUpFromLine },
+      { label: "teste3", to: "/teste", icon: SlidersHorizontal },
     ],
-  },
-  {
-    label: "Usuários",
-    to: "/usuarios",
-    icon: Users,
-    // roles: ["ADMINISTRADOR", "GERENTE"],
   },
 ]
 

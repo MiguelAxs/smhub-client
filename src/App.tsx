@@ -3,6 +3,7 @@ import { Providers } from "@/app/providers"
 import { LoginPage } from "@/features/auth/pages/login-page"
 import {AppLayout} from "@/layouts/app-layout.tsx";
 import {DashboardPage} from "@/features/dashboard/dashboard-page.tsx";
+import {ProtectedRoute} from "@/app/routes/protected-route.tsx";
 
 export default function App() {
   return (
@@ -10,8 +11,10 @@ export default function App() {
         <BrowserRouter>
           <Routes>
               <Route path="/login" element={<LoginPage />} />
-              <Route element={<AppLayout/>}>
-                  <Route path="/dashboard" element={<DashboardPage/>}/>
+              <Route element={<ProtectedRoute/>}>
+                  <Route element={<AppLayout/>}>
+                      <Route path="/dashboard" element={<DashboardPage/>}/>
+                  </Route>
               </Route>
               <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Routes>

@@ -58,7 +58,7 @@ export function Logo({ collapsed = false, className }: LogoProps) {
     <div className={cn("flex items-center gap-2.5", className)}>
       <LogoMark className="size-8 shrink-0" />
       {!collapsed && (
-        <span className="font-heading text-lg font-bold leading-none tracking-tight">
+        <span className="font-heading text-lg font-bold leading-none tracking-tight whitespace-nowrap overflow-hidden">
           Stock<span className="text-primary">Flow</span>
         </span>
       )}
